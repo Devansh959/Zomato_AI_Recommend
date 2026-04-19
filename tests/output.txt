@@ -1,0 +1,26 @@
+Initializing TestClient (this will load the dataset)...
+Loading and cleaning restaurant dataset into memory...
+Loaded 51717 restaurants.
+
+--- Test 1: Basic Location Filter ---
+Request: {'location': 'Banashankari', 'budget': 'medium'}
+Response OK. Recommendations count: 4
+Sample Recommendation: [
+  {
+    "restaurant_name": "Onesta",
+    "cuisine": "Pizza, Cafe, Italian",
+    "rating": 4.6,
+    "estimated_cost": "600",
+    "url": "https://www.zomato.com/bangalore/onesta-banashankari?context=eyJzZSI6eyJlIjpbIjU0MzUyIiwiMTg4MjI1OTEiLCIxODMxMzU0MiIsIjU0Mjk3IiwxODU2NTY3OSwiMTg3NDU4ODUiLCIxODc2NTg4OCIsIjE4NzM0NTg0IiwiMTg3NDI4NTAiLCIxODg3Nzk1MSIsIjE4NDY4ODQ4IiwiNTkyMDUiLCIxODM2MjQwMyIsIjE4ODU0MjgwIiwiMTg3NDA5NDEiLCI1NzMzMCIsIjE4ODg5MzAxIiwiNTQwODYiLCI1NDExMCJdLCJ0IjoiRGVsaXZlcnkgUmVzdGF1cmFudHMgaW4gSmF5YW5hZ2FyIn19",
+    "ai_explanation": "Onesta is a perfect match for your preferences as it is located in Banashankari, has a medium budget, and serves a variety of cuisines including Pizza, Cafe, and Italian."
+  }
+]
+
+--- Test 2: Specific Cuisine and High Budget ---
+Request: {'location': 'Bangalore', 'cuisine': 'Italian', 'budget': 'high', 'min_rating': 4.0}
+Response OK. Recommendations count: 0
+Sample Recommendation: []
+
+--- Test 3: Edge Case (No match) ---
+Request: {'location': 'NowhereCity', 'cuisine': 'Alien'}
+Response OK. {'recommendations': [], 'message': 'No restaurants found matching your exact criteria.'}

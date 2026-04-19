@@ -1,0 +1,2 @@
+- Use a dropdown for location where we csn select from all the available locations.
+- use a slider for budget and decide on the basis of cost of two for each restaurant dynamically.

@@ -1,0 +1,27 @@
+# Environments
+venv/
+env/
+.env
+.venv/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Databases
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
